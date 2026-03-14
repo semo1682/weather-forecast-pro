@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast Pro | Eslam Mesalam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-default">
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="app">
+    <section class="weather-card">
+      <div class="header">
+        <div>
+          <p class="eyebrow">Weather App</p>
+          <h1>Weather Forecast Pro</h1>
+          <p class="subtext">Search any city or use your live location</p>
+        </div>
+      </div>
+
+      <form id="searchForm" class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name..." />
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="action-row">
+        <button id="locationBtn" class="ghost-btn" type="button">Use My Location</button>
+      </div>
+
+      <p class="message" id="message">Search for a city like Cairo, London, or Dubai.</p>
+
+      <div class="loader hidden" id="loader"></div>
+
+      <section class="current-weather hidden" id="currentWeather">
+        <div class="hero-weather">
+          <div class="hero-left">
+            <div class="weather-icon-box">
+              <div class="weather-icon" id="weatherIcon">☀️</div>
+            </div>
+
+            <div>
+              <h2 id="cityName">Cairo, Egypt</h2>
+              <p id="weatherText">Clear sky</p>
+            </div>
+          </div>
+
+          <div class="temp-wrap">
+            <div class="temp" id="temperature">22°C</div>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="detail-box">
+            <span>Wind</span>
+            <strong id="windSpeed">14 km/h</strong>
+          </div>
+
+          <div class="detail-box">
+            <span>Humidity</span>
+            <strong id="humidity">65%</strong>
+          </div>
+
+          <div class="detail-box">
+            <span>Max Temp</span>
+            <strong id="maxTemp">30°C</strong>
+          </div>
+
+          <div class="detail-box">
+            <span>Min Temp</span>
+            <strong id="minTemp">19°C</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="forecast hidden" id="forecastSection">
+        <div class="section-head">
+          <h3>5-Day Forecast</h3>
+          <p>Upcoming daily weather overview</p>
+        </div>
+        <div class="forecast-grid" id="forecastGrid"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js?v=20"></script>
+</body>
+</html>
